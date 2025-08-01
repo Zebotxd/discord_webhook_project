@@ -49,7 +49,7 @@ main_embed = discord.Embed(
 )
 
 main_embed.set_author(
-    name="Sign up-guide",
+    name="Vores forventninger og krav til raidet og til jer",
     icon_url='https://cdn.discordapp.com/embed/avatars/0.png'
 )
 
