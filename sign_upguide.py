@@ -10,6 +10,9 @@ if not WEBHOOK_URL:
     print("Error: DISCORD_WEBHOOK_URL environment variable is not set.")
     exit(1)
 
+# Din thumbnail-URL (udskift dette med linket fra din Discord-kanal)
+THUMBNAIL_URL = 'https://cdn.discordapp.com/attachments/1400838933960589422/1400840729085087855/Praktikanterne_logo.png?ex=688e1a18&is=688cc898&hm=eeb70914e72056e2bdf4a9f6b9e4f930f0dc6407f5d64bec51ebfd1c28bef66d&'
+
 # List of image URLs you want to include.
 # Replace these with your actual image links.
 image_urls = [
@@ -51,6 +54,9 @@ main_embed.set_author(
     name="Sign up-guide",
     icon_url='https://cdn.discordapp.com/embed/avatars/0.png' # You can put a URL to a guild icon here.
 )
+
+# Tilføj dette for at gøre embed'et bredere
+main_embed.set_thumbnail(url=THUMBNAIL_URL)
 
 # Set the first image for the gallery.
 main_embed.set_image(url=image_urls[0])
