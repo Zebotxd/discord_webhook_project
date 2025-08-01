@@ -14,34 +14,27 @@ if not WEBHOOK_URL:
 THUMBNAIL_URL = 'https://cdn.discordapp.com/attachments/1400838933960589422/1400840729085087855/Praktikanterne_logo.png?ex=688e1a18&is=688cc898&hm=eeb70914e72056e2bdf4a9f6b9e4f930f0dc6407f5d64bec51ebfd1c28bef66d&'
 
 description_text = """
-Vi raider Onsdag og Søndag fra 20:00-22:30.
-De 3 første uger køre vi dog også Tirsdag
+**Raidtider og Mål**
+Vi raider onsdag og søndag fra 20:00-22:30. De første tre uger raider vi også tirsdag.
 
-Vores mål for dette tier er CE, samt at vi selvfølgelig skal slå os selv fra season 2!
+Vores mål er at opnå Cutting Edge (CE) og overgå vores tidligere præstationer.
 
-**Vores krav:**
+Invites sendes ud kl. 19:45, og vi puller kl. 20:00. Tilmeld dig raids senest 24 timer før.
 
-Man signer op til raid senest 24 timer før raid i ⁠sign-up (meget gerne før).
+**Krav til Raids**
+For at sikre et effektivt raidmiljø har vi følgende krav til vores medlemmer:
 
-Raid starter kl. 20. Invites går ud ca. 19:45, så vi kan være klar til pulle kl. 20:00.
+Ugentlige keys: I uge 1 skal du have Keystone Master (2k rating). Fra uge 2 skal du have gennemført 4x +10 keys om ugen. Spillere, der ikke opfylder dette, vil blive nedprioriteret på loot og roster.
 
-M+-krav i uge 1: Opnå Keystone Master (2k rating).
+Forberedelse: Sæt dig ind i din class, læs op på boss-mekanikker, og hold dig opdateret om relevante raid-buffs.
 
-M+-krav fra uge 2: 4x +10 keys om ugen. Man bliver nedprioriteret på loot og roster, hvis man ikke har opfyldt m+-kravet ugen forinden (Kravet bliver fjernet slut tier nå det ikke giver mening længere).
+Gear: Sørg for at have de korrekte crafted items med embellishments, og at dit gear er fuldt enchanted og gemmed.
 
-Man har sat sig ind i sin class, læst op på changes, boss mechanics og holdt sig opdateret med eventuelle tilgængelige raid buffs.
+Consumsables: Medbring selv oils. Guilden står for feasts, cauldrons (flasks/potions) og vantus runes, men hav en backup i dine egne tasker.
 
-Man har crafted items med embellishments, når det er muligt. Sim jeres char eller spørg efter hjælp, hvis i er tvivl om, hvad der giver mest mening at crafte først.
+Addons: Installer de nødvendige WeakAuras og addons. Tjek altid specifikke krav for individuelle bosser i de dedikerede tekstkanaler.
 
-Man har enchanted sit gear til raid (minimum rank 2 fra start, og rank 3 når vi begynder på mythic).
-
-Man skal have socket og gems i neck og rings (på hero- og mythictrack gear)
-
-I skal selv medbringe oils. Vi sørger for feasts, repair-hammers, cauldrons med flasks og potions og vantus runes. Hav gerne lige lidt backup i jeres egne bags, hvis i skulle misse et feast eller en cauldron.
-
-Man skal have installeret de Weakauras & addons, som man finder i tråden nedenunder. Der kan være krav til specifikke WeakAuras & Addons på nogle bosser, og disse vil fremgå i tekstkanaler med bossens navn. Husk at orientér jer heri inden raid.
-
-BOEs går til guildbanken. De skal trades til <@173786599140622336> (zebåt i raidet). Det er muligt at købe et BOE-item, hvis det er en stor upgrade eller et BIS-item til 30% af AH-markedsprisen..
+BOEs: Eventuelle BOE-items trades til guildbanken via <@173786599140622336>. Det er muligt at købe et item til 30% af Auktionshusets markedspris, hvis det er en stor opgradering.
 """
 
 # Create a single embed with a title, description, and author.
