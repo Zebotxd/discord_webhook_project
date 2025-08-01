@@ -27,7 +27,7 @@ shared_url = 'https://discord.com/channels/937428319295655966/122622524228501928
 
 # Opdateret beskrivelse med den kortere version.
 description_text = """
-**Tilmeldingsguide**
+**Tilmeldingsguide <#1226225242285019286>**
 - **Første gang:** Vælg status (Present/Absent/Late) og følg linket fra WoWaudit-botten for at linke din konto. Herefter kan du tilmelde dig fra enhver enhed.
 
 - **Deadline:** Du skal tilmelde dig senest 24 timer før raidstart. Roster sættes ca. 24 timer før.
@@ -38,7 +38,7 @@ description_text = """
 
 # Create the first embed with the title, author, and description.
 main_embed = discord.Embed(
-    title='Til raid sign-up bruger vi WoWaudit, som findes i kanalen <#1226225242285019286>',
+    title='',
     description=description_text,
     url=shared_url,
     color=discord.Color.green()
