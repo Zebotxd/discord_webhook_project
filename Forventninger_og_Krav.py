@@ -10,6 +10,9 @@ if not WEBHOOK_URL:
     print("Error: DISCORD_WEBHOOK_URL environment variable is not set.")
     exit(1)
 
+# Din thumbnail-URL (udskift dette med linket fra din Discord-kanal)
+THUMBNAIL_URL = 'https://cdn.discordapp.com/attachments/1400838933960589422/1400840729085087855/Praktikanterne_logo.png?ex=688e1a18&is=688cc898&hm=eeb70914e72056e2bdf4a9f6b9e4f930f0dc6407f5d64bec51ebfd1c28bef66d&'
+
 description_text = """
 Vi raider Onsdag og Søndag fra 20:00-22:30.
 De 3 første uger køre vi dog også Tirsdag
@@ -52,6 +55,9 @@ main_embed.set_author(
     name="Vores forventninger og krav til raidet og til jer",
     icon_url='https://cdn.discordapp.com/embed/avatars/0.png'
 )
+
+# Tilføj dette for at gøre embed'et bredere
+main_embed.set_thumbnail(url=THUMBNAIL_URL)
 
 # Create a list to hold the single embed object.
 embeds_list = [main_embed]
