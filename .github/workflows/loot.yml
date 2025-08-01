@@ -1,5 +1,4 @@
-name: Weakaura Og addons
-
+name: Loot
 on:
   workflow_dispatch: # This allows you to manually run the workflow from the Actions tab
 
