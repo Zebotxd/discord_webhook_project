@@ -40,7 +40,7 @@ At blive forsinket eller udeblive fra raid efter roster er sat - uden at give ly
 
 # Create the first embed with the title, author, and description.
 main_embed = discord.Embed(
-    title='Sign-up Guide',
+    title='Til raid sign-up bruger vi WoWaudit, som findes i kanalen <#1226225242285019286>',
     description=description_text,
     url=shared_url,
     color=discord.Color.blue()
@@ -48,7 +48,7 @@ main_embed = discord.Embed(
 
 # Add the author attribute. You can replace the name and icon_url.
 main_embed.set_author(
-    name="Til raid sign-up bruger vi WoWaudit, som findes i kanalen"<#1226225242285019286>,
+    name="Sign up-guide"
     icon_url='https://cdn.discordapp.com/embed/avatars/0.png' # You can put a URL to a guild icon here.
 )
 
