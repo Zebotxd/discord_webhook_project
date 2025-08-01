@@ -25,7 +25,8 @@ Loot Council: <@169196574419714048>, <@194054862814576640> og <@3216390794921902
 **Vejledning til RCLC:**
 - **BIS:** "Best In Slot" på din BIS-liste.
 - **Upgrade:** En opgradering, stor som lille. **Kræver note.**
-- **Off-spec:** Fordeles til officielle off-spec roller først (Cyd & Fynbo), derefter via roll.
+- **Tierpiece 1/4 - 5/4:** Vælg det antal tier pieces, du har efter loot. Har du 0, vælg 1/4.
+- **Off-spec:** Fordeles til officielle off-spec roller først, derefter via roll.
 - **Transmog:** Fordeles via roll, hvis ingen andre har brug for itemet.
 - **Noter:** Brug noter til at forklare din anmodning, især hvis sim-dataen er uklar.
 """
