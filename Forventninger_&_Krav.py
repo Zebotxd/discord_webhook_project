@@ -10,20 +10,6 @@ if not WEBHOOK_URL:
     print("Error: DISCORD_WEBHOOK_URL environment variable is not set.")
     exit(1)
 
-# List of image URLs you want to include.
-# Replace these with your actual image links.
-#image_urls = [
-#    'https://i.imgur.com/DCXga87.png',
-#    'https://i.imgur.com/8WUzMz7.png',
-#    'https://i.imgur.com/IV6rg0l.png',
-#    'https://i.imgur.com/cldUdeP.png'
-#]
-
-# The URL that will be shared by all embeds to group them.
-#shared_url = 'https://discord.com/channels/937428319295655966/1226225242285019286' # Use a link relevant to your guild or project.
-
-# This is the text you provided, formatted for the embed description.
-# The triple quotes allow for multi-line text with formatting.
 description_text = """
 Vi raider Onsdag og Søndag fra 20:00-22:30.
 De 3 første uger køre vi dog også Tirsdag
@@ -55,32 +41,20 @@ Man skal have installeret de Weakauras & addons, som man finder i tråden nedenu
 BOEs går til guildbanken. De skal trades til <@173786599140622336> (zebåt i raidet). Det er muligt at købe et BOE-item, hvis det er en stor upgrade eller et BIS-item til 30% af AH-markedsprisen..
 """
 
-# Create the first embed with the title, author, and description.
+# Create a single embed with a title, description, and author.
 main_embed = discord.Embed(
     title='**THE WAR WITIHIN SEASON 3**',
     description=description_text,
-    #url=shared_url,
     color=discord.Color.blue()
 )
 
-# Add the author attribute. You can replace the name and icon_url.
 main_embed.set_author(
     name="Sign up-guide",
-    icon_url='https://cdn.discordapp.com/embed/avatars/0.png' # You can put a URL to a guild icon here.
+    icon_url='https://cdn.discordapp.com/embed/avatars/0.png'
 )
 
-# Set the first image for the gallery.
-main_embed.set_image(url=image_urls[0])
-
-# Create a list to hold all the embed objects.
+# Create a list to hold the single embed object.
 embeds_list = [main_embed]
-
-# Loop through the remaining images and create a new embed for each.
-for url in image_urls[1:]:
-    # Create a new embed with the same shared_url and only the image.
-    embeds_list.append(
-        discord.Embed(url=shared_url).set_image(url=url)
-    )
 
 # Now, send the embeds to the webhook.
 try:
