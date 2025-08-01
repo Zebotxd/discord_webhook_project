@@ -53,7 +53,7 @@ AOE           - Patchwork, 5 targets, 5 min fight.
 
 # Create the first embed with the title, author, and description.
 main_embed = discord.Embed(
-    title='Beskrivelse af, hvordan man simmer som DPS'er og tank.'
+    title="Beskrivelse af, hvordan man simmer som DPS'er og tank.",
     description=description_text,
     url=shared_url,
     color=discord.Color.blue()
