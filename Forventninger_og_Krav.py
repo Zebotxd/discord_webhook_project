@@ -45,7 +45,7 @@ BOEs går til guildbanken. De skal trades til <@173786599140622336> (zebåt i ra
 main_embed = discord.Embed(
     title='**THE WAR WITIHIN SEASON 3**',
     description=description_text,
-    color=discord.Color.blue()
+    color=discord.Color.red()
 )
 
 main_embed.set_author(
