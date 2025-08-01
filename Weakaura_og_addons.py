@@ -45,7 +45,7 @@ main_embed = discord.Embed(
 
 main_embed.set_author(
     name="Weakaura & Addons",
-    icon_url='https://cdn2.steamgriddb.com/icon/2e45ae11c8bf524be5abf520862758b2.ico',
+    icon_url='https://static.wikia.nocookie.net/minecraft-esp/images/1/13/CurseForge_Logo.png/revision/latest/thumbnail/width/360/height/450?cb=20220808083438&path-prefix=es',
 )
 
 # --- Tilføj dette for at gøre embed'et bredere ---
