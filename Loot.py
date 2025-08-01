@@ -41,10 +41,10 @@ Note:  Brug noten effektivt. Giv en forklaring eller uddybning - især hvis du t
 
 # Create a single embed with a title, description, and author.
 main_embed = discord.Embed(
-    title='**Loot fordeles af loot council (LC) ved hjælp af RC Loot Council addon (RCLC). 
-LC består af loot-officer <@169196574419714048> samt vores raiders <@194054862814576640> og <@321639079492190208>**',
+    title="""**Loot fordeles af loot council (LC) ved hjælp af RC Loot Council addon (RCLC). 
+LC består af loot-officer <@169196574419714048> samt vores raiders <@194054862814576640> og <@321639079492190208>**""",
     description=description_text,
-    color=discord.Color.gold()
+    color=discord.Color.purple()
 )
 
 main_embed.set_author(
