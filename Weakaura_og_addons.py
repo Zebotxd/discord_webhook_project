@@ -43,7 +43,7 @@ main_embed.set_author(
 # --- Tilføj dette for at gøre embed'et bredere ---
 # Tilføj et felt med en lang række af bindestreger.
 # Dette felt vil være synligt, men det tvinger embed'et til at være bredere.
-main_embed.add_field(name=" ", value="─" * 61, inline=False)
+main_embed.add_field(name=" ", value="─" * 62, inline=False)
 # --- Slut på tilføjelsen ---
 
 # Create a list to hold the single embed object.
