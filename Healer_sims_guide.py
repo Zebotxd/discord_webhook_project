@@ -13,6 +13,9 @@ if not WEBHOOK_URL:
     print("Error: DISCORD_WEBHOOK_URL environment variable is not set.")
     exit(1)
 
+# Din thumbnail-URL (udskift dette med linket fra din Discord-kanal)
+THUMBNAIL_URL = 'https://cdn.discordapp.com/attachments/1400838933960589422/1400840729085087855/Praktikanterne_logo.png?ex=688e1a18&is=688cc898&hm=eeb70914e72056e2bdf4a9f6b9e4f930f0dc6407f5d64bec51ebfd1c28bef66d&'
+
 # Liste over alle dine billed-URL'er fra Discord's CDN.
 all_image_urls = [
     'https://cdn.discordapp.com/attachments/1397519593764814889/1400823597143953419/Healer_guide_1.png?ex=688e0a23&is=688cb8a3&hm=af21235a48e9f347789de21d73760e5c38a9930c26ae78eb7ef1042e541a004d&',
@@ -49,6 +52,9 @@ main_embed.set_author(
     name="Beskrivelse af, hvordan man simmer som healer",
     icon_url='https://cdn.discordapp.com/embed/avatars/0.png'
 )
+
+# Tilføj dette for at gøre embed'et bredere
+main_embed.set_thumbnail(url=THUMBNAIL_URL)
 
 # Send den første besked med embed-objektet
 try:
