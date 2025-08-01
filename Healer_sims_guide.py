@@ -42,7 +42,7 @@ Vi bruger sims til at fordele loot, så det giver mest muligt udbytte. Har du sp
 
 # --- Trin 1: Opret og send embed-beskeden ---
 main_embed = discord.Embed(
-    title='I kan følge nedenstående guide til, hvordan i uploader jeres sims, som skal være uploaded inden raid for at få loot',
+    title='',
     description=description_text,
     color=discord.Color.blue()
 )
