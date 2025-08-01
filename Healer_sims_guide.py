@@ -21,13 +21,6 @@ all_image_urls = [
     'https://i.imgur.com/QhzVeOH.png'
 ]
 
-# Split the images into two groups
-images_part1 = all_image_urls[:4]
-images_part2 = all_image_urls[4:]
-
-# The URL that will be shared by all embeds to group them.
-shared_url = 'https://discord.com/channels/937428319295655966/1226225242285019286'
-
 description_text = """
 Vi bruger sims til at fordele lootet ud til de personer, som får mest ud af det.
 Hvis der er nogle spørgsmål eller udfordringer, så hiv gerne fat i loot-officer, @bonkaboy.
@@ -42,11 +35,10 @@ Tryk på "Go" (se billede 6).
 Når jeres sim er færdig, kopierer i linket og smider det ind under "Wishlist - Personal" på https://wowaudit.com/eu/silvermoon/praktikanterne/main/wishlists/personal (Se billede 7).
 """
 
-# --- Første embed (with text and first 4 images) ---
+# --- Step 1: Create and send the embed without images ---
 main_embed = discord.Embed(
     title='I kan følge nedenstående guide til, hvordan i uploader jeres sims, som skal være uploadet inden raid for at få loot',
     description=description_text,
-    url=shared_url,
     color=discord.Color.blue()
 )
 
@@ -55,41 +47,37 @@ main_embed.set_author(
     icon_url='https://cdn.discordapp.com/embed/avatars/0.png'
 )
 
-# Set the first image for the gallery.
-main_embed.set_image(url=images_part1[0])
+# Create a list to hold the single embed object.
+embeds_list = [main_embed]
 
-embeds_list_part1 = [main_embed]
-for url in images_part1[1:]:
-    embeds_list_part1.append(
-        discord.Embed(url=shared_url).set_image(url=url)
-    )
+# --- Step 2: Prepare the image files for the second message ---
+files_to_send = {}
+for i, url in enumerate(all_image_urls):
+    try:
+        response = requests.get(url, stream=True)
+        response.raise_for_status()
+        files_to_send[f"image{i+1}.png"] = response.content
+    except requests.exceptions.RequestException as e:
+        print(f"Failed to fetch image from URL {url}: {e}")
 
-# --- Anden embed (with remaining images) ---
-# This embed will be sent as a separate message.
-embeds_list_part2 = []
-for url in images_part2:
-    # We still need the shared_url to make it a gallery of images
-    embeds_list_part2.append(
-        discord.Embed(url=shared_url).set_image(url=url)
-    )
-
-# --- Send both webhooks separately ---
+# --- Step 3: Send both messages separately ---
 try:
-    # Send the first message with the first gallery
+    # Send the first message with the embed
     response1 = requests.post(
         WEBHOOK_URL,
-        json={'embeds': [e.to_dict() for e in embeds_list_part1]},
+        json={'embeds': [e.to_dict() for e in embeds_list]},
         headers={'Content-Type': 'application/json'}
     )
     response1.raise_for_status()
+    print("Successfully sent embed message.")
 
-    # Send the second message with the second gallery
+    # Send the second message with the image attachments
     response2 = requests.post(
         WEBHOOK_URL,
-        json={'embeds': [e.to_dict() for e in embeds_list_part2]},
-        headers={'Content-Type': 'application/json'}
+        files=files_to_send,
     )
     response2.raise_for_status()
-    print("Successfully sent both webhook messages.")
+    print("Successfully sent image messages.")
+    
 except requests.exceptions.RequestException as e:
     print(f"Failed to send webhook message: {e}")
