@@ -15,6 +15,8 @@ THUMBNAIL_URL = 'https://cdn.discordapp.com/attachments/1400838933960589422/1400
 
 description_text = """
 
+Loot council består af loot-officer <@169196574419714048> samt vores raiders <@194054862814576640> og <@321639079492190208>
+
 Man skal simme inden raid, før man kan få loot, ellers har LC ikke noget data at gå ud fra. For hjælp til at simme, se vore sim guides. Sørg for at forny din sim, hvis du udskifter eller opgraderer et item. LC kan se, hvilke items man har simmet med, og hvis det ikke stemmer overens med det, man har på, kan man ikke få tildelt det item, da de ikke har de rigtige sims at gå ud fra. Sim i god tid inden raid, da botten kan få travlt lige inden, ellers læg dem ind manuelt.
 
 Der uddeles loot efter, hvad der er BIS i raid og ikke m+. M+ kommer i 2. række. Brug noten i RCLC.
@@ -41,8 +43,7 @@ Note:  Brug noten effektivt. Giv en forklaring eller uddybning - især hvis du t
 
 # Create a single embed with a title, description, and author.
 main_embed = discord.Embed(
-    title="""Loot fordeles af loot council (LC) ved hjælp af RC Loot Council addon (RCLC). 
-LC består af loot-officer <@169196574419714048> samt vores raiders <@194054862814576640> og <@321639079492190208>""",
+    title="""Loot fordeles af loot council (LC) ved hjælp af RC Loot Council addon (RCLC)""",
     description=description_text,
     color=discord.Color.gold()
 )
