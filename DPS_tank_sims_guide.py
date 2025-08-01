@@ -59,7 +59,7 @@ main_embed = discord.Embed(
     title="Beskrivelse af, hvordan man simmer som DPS'er og tank.",
     description=description_text,
     url=shared_url,
-    color=discord.Color.blue()
+    color=discord.Color.orange()
 )
 
 # Add the author attribute. You can replace the name and icon_url.
