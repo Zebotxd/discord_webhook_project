@@ -26,32 +26,40 @@ shared_url = 'https://discord.com/channels/937428319295655966/122622524228501928
 # This is the text you provided, formatted for the embed description.
 # The triple quotes allow for multi-line text with formatting.
 description_text = """
-I kan følge nedenstående guides "Automatisk/Manuel" til, hvordan i uploader jeres sims, som skal være uploadet inden raid for at få loot.
-Vi bruger sims til at fordele loot til lige de personer, som får mest ud af det.
-Hvis der er nogle spørgsmål eller udfordringer, så hiv gerne fat i <@173786599140622336> .
+**Sims og Lootfordeling**
+Vi bruger sims til at sikre, at loot bliver fordelt til dem, der får mest ud af det. For at modtage loot er det derfor et krav, at dine sims er uploadet inden raid. Har du spørgsmål eller udfordringer, skal du kontakte <@173786599140622336>.
 
-**Automatisk:**
-Tag jeres "/Simc"-string ingame med jeres raid gear på.
-Sæt jeres "/Simc"-string ind i kanalen <#1249690921566601247>.
-Her er det muligt, den brokker sig, hvortil i skal vælge at uploade "simc" som en fil.
-Vigtigt! Husk, at uploade ST først og derefter AOE, såfremt i vil uploade for begge muligheder. 
-Botten reagerer nu med "⏳", og hertil kan der gå op til 10min, før den reagerer med " ✅ / ⛔ "
-Reagerer den med " ✅ " er alt fint, og jeres sims er uploadet, som de skal.
-Reagere den med " ⛔ " er der gået noget galt. Herefter kan i tage fat i <@173786599140622336>. 
-(Husk at uploade i god tid, da botten kan være presset lige op til raid).
-Man kan også se denne YouTube-video, hvor Wossti forklarer det for os meget pædagogisk: https://www.youtube.com/watch?v=GSVXPuNl65o 
+**Automatisk upload (anbefalet)**
+Udstyr dit raid-gear i spillet.
 
-**Manuel:**
-Tag jeres "/Simc"-string ingame med jeres raid gear på.
-Gå ind på www.Raidbots.com og vælg Droptimizer.
-Paste jeres "/Simc"-string og vælg det pågældende raid. (Se eksempel: Billede 1)
-Duplikér jeres vindue, så i har to. Der skal nemlig køres to Droptimizers med følgende:
-Patchwork, 1 targets, 5 min fight.
-Patchwork, 5 targets, 5 min fight.
-Når disse sims er færdige, kopierer i linket og smider det ind under "Wishlist - Personal" på https://wowaudit.com/eu/silvermoon/praktikanterne/main/wishlists/personal
-Her står der, at i kan uploade jeres raidbots link, hvor i oppe i toppen af højre hjørne skal vælge, om det er "Single Target" eller "AOE" (Se billede 2)
-Single Target - Patchwork, 1 targets, 5 min fight.
-AOE           - Patchwork, 5 targets, 5 min fight.
+Skriv /simc i chatten og kopier teksten.
+
+Indsæt teksten i Discord-kanalen <#1249690921566601247>. Hvis teksten er for lang, skal du uploade den som en fil.
+
+Upload Single Target (ST) sim først, og derefter AoE-sim, hvis du ønsker at uploade for begge.
+
+Botten reagerer med ⏳, og når den er færdig, vises ✅ for succes eller ⛔ ved fejl.
+
+Upload i god tid, da botten kan være belastet op til raid.
+
+Tip: Få en mere detaljeret, pædagogisk forklaring i denne YouTube-guide, der viser hele processen med at bruge botten: https://www.youtube.com/watch?v=GSVXPuNl65o .
+
+**Manuel upload**
+Udstyr dit raid-gear og tag din /simc-streng.
+
+Gå til www.Raidbots.com og vælg Droptimizer.
+
+Paste din /simc-streng, vælg det relevante raid, og kør to separate sims:
+
+Single Target (ST): Patchwork, 1 target, 5 min.
+
+AoE: Patchwork, 5 targets, 5 min.
+
+Når dine sims er færdige, kopierer du linket.
+
+Gå til https://wowaudit.com/eu/silvermoon/praktikanterne/main/wishlists/personal.
+
+Indsæt Raidbots-linket under "Wishlist - Personal" og vælg, om det er en "Single Target" eller "AOE" sim.
 """
 
 # Create the first embed with the title, author, and description.
