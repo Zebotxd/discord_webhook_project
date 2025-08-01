@@ -15,26 +15,20 @@ THUMBNAIL_URL = 'https://cdn.discordapp.com/attachments/1400838933960589422/1400
 
 description_text = """
 **Raidtider og Mål**
-Vi raider onsdag og søndag fra 20:00-22:30. De første tre uger raider vi også tirsdag.
-
-Vores mål er at opnå Cutting Edge (CE) og overgå vores tidligere præstationer.
-
-Invites sendes ud kl. 19:45, og vi puller kl. 20:00. Tilmeld dig raids senest 24 timer før.
+Vi raider onsdag og søndag fra 20:00-22:30. De første tre uger raider vi også tirsdag. Vores mål er Cutting Edge (CE). Invites kl. 19:45, og vi puller kl. 20:00. Tilmeld dig raids senest 24 timer før.
 
 **Krav til Raids**
-For at sikre et effektivt raidmiljø har vi følgende krav til vores medlemmer:
+**Ugentlige Keys:** 2k rating i uge 1. Derefter 4x +10 keys om ugen. Manglende opfyldelse giver nedprioritering på loot og roster.
 
-Ugentlige keys: I uge 1 skal du have Keystone Master (2k rating). Fra uge 2 skal du have gennemført 4x +10 keys om ugen. Spillere, der ikke opfylder dette, vil blive nedprioriteret på loot og roster.
+**Forberedelse:** Du skal kende din class og have læst op på boss-mekanikker,  Tjek altid specifikke krav for bosser i de dedikerede tekstkanaler.
 
-Forberedelse: Sæt dig ind i din class, læs op på boss-mekanikker, og hold dig opdateret om relevante raid-buffs.
+**Gear:** Sørg for at have de korrekte crafted items, enchants og gems.
 
-Gear: Sørg for at have de korrekte crafted items med embellishments, og at dit gear er fuldt enchanted og gemmed.
+**Consumables:** Medbring selv oils. Guilden står for feasts og cauldrons, men hav en backup i dine tasker.
 
-Consumsables: Medbring selv oils. Guilden står for feasts, cauldrons (flasks/potions) og vantus runes, men hav en backup i dine egne tasker.
+**Addons:** Installer de nødvendige WeakAuras og addons.
 
-Addons: Installer de nødvendige WeakAuras og addons. Tjek altid specifikke krav for individuelle bosser i de dedikerede tekstkanaler.
-
-BOEs: Eventuelle BOE-items trades til guildbanken via <@173786599140622336>. Det er muligt at købe et item til 30% af Auktionshusets markedspris, hvis det er en stor opgradering.
+**BOEs:** Trades til guildbanken via <@173786599140622336>. De kan købes til 30% af AH-markedsprisen, hvis det er en stor opgradering.
 """
 
 # Create a single embed with a title, description, and author.
