@@ -25,7 +25,6 @@ WeakAuras (WA)
 Simulationcraft
 Liquid Auraupdater (Se guide nedenfor) 
 
-
 **WeakAuras:**
 Liquid (Hentes via AuraUpdater)
 Kaze MRT Timers: https://wago.io/n7l5uN3YM
