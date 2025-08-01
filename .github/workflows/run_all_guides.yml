@@ -1,0 +1,44 @@
+name: Run All Guides
+
+on:
+  workflow_dispatch:
+
+jobs:
+  send_all_messages:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository code
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.10'
+
+      - name: Install dependencies
+        run: pip install discord.py requests
+
+      - name: Run Forventninger & Krav Guide
+        run: python Forventninger_og_Krav.py
+        env:
+          DISCORD_WEBHOOK_URL: ${{ secrets.DISCORD_WEBHOOK_URL }}
+
+      - name: Run Weakaura & Addons Guide
+        run: python Weakaura_og_addons.py
+        env:
+          DISCORD_WEBHOOK_URL: ${{ secrets.DISCORD_WEBHOOK_URL }}
+
+      - name: Run Sign-up Guide
+        run: python sign_upguide.py
+        env:
+          DISCORD_WEBHOOK_URL: ${{ secrets.DISCORD_WEBHOOK_URL }}
+
+      - name: Run DPS/Tank Sims Guide
+        run: python DPS_tank_sims_guide.py
+        env:
+          DISCORD_WEBHOOK_URL: ${{ secrets.DISCORD_WEBHOOK_URL }}
+
+      - name: Run Healer Sims Guide
+        run: python Healer_sims_guide.py
+        env:
+          DISCORD_WEBHOOK_URL: ${{ secrets.DISCORD_WEBHOOK_URL }}
