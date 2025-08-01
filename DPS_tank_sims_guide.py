@@ -30,29 +30,25 @@ description_text = """
 Vi bruger sims til at sikre, at loot bliver fordelt til dem, der får mest ud af det. For at modtage loot er det derfor et krav, at dine sims er uploadet inden raid. Har du spørgsmål eller udfordringer, skal du kontakte <@173786599140622336>.
 
 **Automatisk upload (anbefalet)**
-Udstyr dit raid-gear i spillet.
-
-Skriv /simc i chatten og kopier teksten.
+Tag dit raid-gear på & skriv /simc i chatten og kopier teksten
 
 Indsæt teksten i Discord-kanalen <#1249690921566601247>. Hvis teksten er for lang, skal du uploade den som en fil.
 
 Upload Single Target (ST) sim først, og derefter AoE-sim, hvis du ønsker at uploade for begge.
 
 Botten reagerer med ⏳, og når den er færdig, vises ✅ for succes eller ⛔ ved fejl.
-
 Upload i god tid, da botten kan være belastet op til raid.
 
 Tip: Få en mere detaljeret, pædagogisk forklaring i denne YouTube-guide, der viser hele processen med at bruge botten: https://www.youtube.com/watch?v=GSVXPuNl65o .
 
 **Manuel upload**
-Udstyr dit raid-gear og tag din /simc-streng.
+Tag dit raid-gear på & skriv /simc i chatten og kopier teksten.
 
 Gå til www.Raidbots.com og vælg Droptimizer.
 
 Paste din /simc-streng, vælg det relevante raid, og kør to separate sims:
 
 Single Target (ST): Patchwork, 1 target, 5 min.
-
 AoE: Patchwork, 5 targets, 5 min.
 
 Når dine sims er færdige, kopierer du linket.
