@@ -20,7 +20,7 @@ image_urls = [
 ]
 
 # The URL that will be shared by all embeds to group them.
-shared_url = 'https://discord.com/channels/937428319295655966/1400763565203521596/1400763652579000392' # Use a link relevant to your guild or project.
+shared_url = 'https://discord.com/channels/937428319295655966/1226225242285019286' # Use a link relevant to your guild or project.
 
 # This is the text you provided, formatted for the embed description.
 # The triple quotes allow for multi-line text with formatting.
