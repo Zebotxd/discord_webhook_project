@@ -28,17 +28,16 @@ all_image_urls = [
 ]
 
 description_text = """
-Vi bruger sims til at fordele lootet ud til de personer, som får mest ud af det.
-Hvis der er nogle spørgsmål eller udfordringer, så hiv gerne fat i loot-officer, @bonkaboy.
+**Sims og Lootfordeling**
+Vi bruger sims til at fordele loot, så det giver mest muligt udbytte. Har du spørgsmål, så kontakt loot-officer @bonkaboy.
 
-**Sådan simmer du:**
-Tag jeres "/Simc"-string ingame med jeres raid gear på.
-Gå ind på https://questionablyepic.com/live/ og vælg "Upgrade finder" (Se billede 1)
-Paste jeres "/Simc"-string ind i "Import gear" (Se billede 2).
-Vælg "Heroic (Max)" og "Mythic (Max)" (se billede 3).
-Tryk på "true" ved socket (se billede 4 og 5).
-Tryk på "Go" (se billede 6).
-Når jeres sim er færdig, kopierer i linket og smider det ind under "Wishlist - Personal" på https://wowaudit.com/eu/silvermoon/praktikanterne/main/wishlists/personal (Se billede 7).
+**Sådan simmer du**
+1. Tag din `/simc`-string i chatten med dit raid gear på.
+2. Gå ind på https://questionablyepic.com/live/ og vælg "Upgrade finder".
+3. Paste `/simc`-strengen ind i "Import gear".
+4. Vælg "Heroic (Max)" og "Mythic (Max)".
+5. Sæt "true" ved socket og tryk "Go".
+6. Når sim er færdig, kopier linket og sæt det ind i din "Wishlist - Personal" på https://wowaudit.com/eu/silvermoon/praktikanterne/main/wishlists/personal.
 """
 
 # --- Trin 1: Opret og send embed-beskeden ---
