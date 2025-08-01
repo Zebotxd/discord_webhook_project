@@ -14,27 +14,20 @@ if not WEBHOOK_URL:
 THUMBNAIL_URL = 'https://cdn.discordapp.com/attachments/1400838933960589422/1400840729085087855/Praktikanterne_logo.png?ex=688e1a18&is=688cc898&hm=eeb70914e72056e2bdf4a9f6b9e4f930f0dc6407f5d64bec51ebfd1c28bef66d&'
 
 description_text = """
-Loot Council består af <@169196574419714048>, <@194054862814576640>, og <@321639079492190208>.
+Loot Council: <@169196574419714048>, <@194054862814576640> og <@321639079492190208>.
 
-**Loot-regler og fordeling**
-Sims er et krav: Du skal simme din karakter inden raid for at LC har data at forholde sig til. Opdater altid din sim, når du får nyt gear. Sims prioriteres over alt andet i lootfordelingen.
+**Regler:**
+- **Sims er et krav:** Opdater altid din sim, når du får nyt gear. Sims er topprioritet for loot.
+- **Loot-prioritet:** Fokuserer på de største DPS-upgrades. Tanks og healers nedprioriteres i starten.
+- **M+ krav:** Manglende opfyldelse af M+ kravet fører til nedprioritering på loot.
+- **Tier Sets:** Fordeles 100% efter sims. Målet er 2-set til alle først.
 
-Loot-prioritet: Vi fordeler loot primært ud fra de største DPS-upgrades. Hvor muligt vil vi også forsøge at fordele loot jævnt, men i starten vil tanks og healers blive nedprioriteret for at fokusere på DPS.
-
-M+ krav: Hvis du ikke opfylder det ugentlige M+ krav, vil du blive nedprioriteret på loot.
-
-Tier Sets: Tier sets fordeles 100% efter sims. Målet er at give alle deres 2-set bonus først, hvorefter vi fokuserer på 4-sets og upgrades.
-
-**Vejledning til RC Loot Council**
-BIS: Tryk, hvis et item er et "Best In Slot" på din liste og kun erstattes af samme item på et højere ilvl.
-
-Upgrade: Tryk, hvis itemet er en opgradering – uanset om den er stor eller lille. Du skal tilføje en note.
-
-Off-spec: Fordeles først til spillere med en officiel off-spec rolle (Cyd er tank, Fynbo er healer), derefter via roll.
-
-Transmog: Vælg dette, hvis ingen andre har brug for itemet. Fordeles via roll.
-
-Noter: Brug noter til at give LC en forklaring, især hvis du anmoder om et item, som ikke umiddelbart ser ud til at være en stor opgradering ifølge sims. Uden note vil LC ikke overveje din anmodning, hvis sim-dataen er uklar.
+**Vejledning til RCLC:**
+- **BIS:** "Best In Slot" på din BIS-liste.
+- **Upgrade:** En opgradering, stor som lille. **Kræver note.**
+- **Off-spec:** Fordeles til officielle off-spec roller først (Cyd & Fynbo), derefter via roll.
+- **Transmog:** Fordeles via roll, hvis ingen andre har brug for itemet.
+- **Noter:** Brug noter til at forklare din anmodning, især hvis sim-dataen er uklar.
 """
 
 # Create a single embed with a title, description, and author.
