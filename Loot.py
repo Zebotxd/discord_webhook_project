@@ -14,31 +14,27 @@ if not WEBHOOK_URL:
 THUMBNAIL_URL = 'https://cdn.discordapp.com/attachments/1400838933960589422/1400840729085087855/Praktikanterne_logo.png?ex=688e1a18&is=688cc898&hm=eeb70914e72056e2bdf4a9f6b9e4f930f0dc6407f5d64bec51ebfd1c28bef66d&'
 
 description_text = """
+Loot Council består af <@169196574419714048>, <@194054862814576640>, og <@321639079492190208>.
 
-Loot council består af loot-officer <@169196574419714048> samt vores raiders <@194054862814576640> og <@321639079492190208>
+**Loot-regler og fordeling**
+Sims er et krav: Du skal simme din karakter inden raid for at LC har data at forholde sig til. Opdater altid din sim, når du får nyt gear. Sims prioriteres over alt andet i lootfordelingen.
 
-Man skal simme inden raid, før man kan få loot, ellers har LC ikke noget data at gå ud fra. For hjælp til at simme, se vore sim guides. Sørg for at forny din sim, hvis du udskifter eller opgraderer et item. LC kan se, hvilke items man har simmet med, og hvis det ikke stemmer overens med det, man har på, kan man ikke få tildelt det item, da de ikke har de rigtige sims at gå ud fra. Sim i god tid inden raid, da botten kan få travlt lige inden, ellers læg dem ind manuelt.
+Loot-prioritet: Vi fordeler loot primært ud fra de største DPS-upgrades. Hvor muligt vil vi også forsøge at fordele loot jævnt, men i starten vil tanks og healers blive nedprioriteret for at fokusere på DPS.
 
-Der uddeles loot efter, hvad der er BIS i raid og ikke m+. M+ kommer i 2. række. Brug noten i RCLC.
+M+ krav: Hvis du ikke opfylder det ugentlige M+ krav, vil du blive nedprioriteret på loot.
 
-Der uddeles loot med fokus på DPS-upgrades, men samtidig vil vi også forsøge at fordele loot jævnt ud mellem alle raiders, så alle får. Dog skal tanks og healers forvente at blive nedprioriteret på loot til fordel for DPS'ere i starten som altid...
+Tier Sets: Tier sets fordeles 100% efter sims. Målet er at give alle deres 2-set bonus først, hvorefter vi fokuserer på 4-sets og upgrades.
 
-Hvis man ikke har opfyldt m+-kravet ugen før, vil man blive nedprioriteret på loot for at gøre det fair for dem, som gør en stor indsats på holdet.
+**Vejledning til RC Loot Council**
+BIS: Tryk, hvis et item er et "Best In Slot" på din liste og kun erstattes af samme item på et højere ilvl.
 
-Tier sets fordeles 100% efter sims, og vi går efter at give alle 2-set først, fordi med catalyst og m+ score/AOTC burde alle kunne ramme 4-set hurtigst muligt. Efter alle har fået 2-set, uddeles 4-set og upgrades til tier set.
- 
--
-Hvad betyder knapperne i RC Loot Council: 
+Upgrade: Tryk, hvis itemet er en opgradering – uanset om den er stor eller lille. Du skal tilføje en note.
 
-BIS: Trykkes ved loot, som man ikke vil erstatte med andet end samme item på et højere ilvl. Altså kun på loot, som står på jeres overall BIS-liste.
+Off-spec: Fordeles først til spillere med en officiel off-spec rolle (Cyd er tank, Fynbo er healer), derefter via roll.
 
-Upgrade:  Trykkes ved loot, som er en upgrade både stor og lille. Man SKAL skrive en note til.
+Transmog: Vælg dette, hvis ingen andre har brug for itemet. Fordeles via roll.
 
-Off-spec: Off-spec gear fordeles til dem, der har en officiel off-spec rolle i raidet først, og derefter uddeles det via roll igennem RCLCs eget roll system. Off-spec tank i raid er Cyd. Off-spec healer i raid er Fynbo.
-
-Transmog:  Uddeles, hvis ingen får en upgrade ud af et item. Uddeles med RCLCs eget roll system, så alle har lige chance.
-
-Note:  Brug noten effektivt. Giv en forklaring eller uddybning - især hvis du trykker upgrade eller BIS uden, at det på sims ser ud til at være en stor upgrade. Hvis der ikke er noteret en note, og sims ikke siger, det er en upgrade, vil LC ikke betragte det som en upgrade.
+Noter: Brug noter til at give LC en forklaring, især hvis du anmoder om et item, som ikke umiddelbart ser ud til at være en stor opgradering ifølge sims. Uden note vil LC ikke overveje din anmodning, hvis sim-dataen er uklar.
 """
 
 # Create a single embed with a title, description, and author.
