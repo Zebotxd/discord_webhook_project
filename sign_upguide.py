@@ -46,7 +46,7 @@ main_embed = discord.Embed(
     title='Til raid sign-up bruger vi WoWaudit, som findes i kanalen <#1226225242285019286>',
     description=description_text,
     url=shared_url,
-    color=discord.Color.blue()
+    color=discord.Color.green()
 )
 
 # Add the author attribute. You can replace the name and icon_url.
