@@ -21,7 +21,7 @@ Liquid Auraupdater (Se guide nedenfor)
 
 
 **WeakAuras:**
-Liquid Liberation of Undermine: https://wago.io/LiquidUndermine \u200b \u200b \u200b \u200b \u200b \u200b \u200b \u200b                                                                         
+Liquid Liberation of Undermine: https://wago.io/LiquidUndermine                                   
 Liquid Weak Auras: https://wago.io/LiquidWeakAuras
 Liquid Raid Anchors: https://wago.io/LiquidAnchors
 Kaze MRT Timers: https://wago.io/n7l5uN3YM
@@ -39,6 +39,12 @@ main_embed.set_author(
     name="Weakaura & Addons",
     icon_url='https://cdn.discordapp.com/embed/avatars/0.png'
 )
+
+# --- Tilføj dette for at gøre embed'et bredere ---
+# Dette felt er usynligt, men tilføjer bredde.
+# Juster antallet af \u200b (zero-width spaces) for at ændre bredden.
+main_embed.add_field(name=" ", value="\u200b" * 50, inline=False)
+# --- Slut på tilføjelsen ---
 
 # Create a list to hold the single embed object.
 embeds_list = [main_embed]
