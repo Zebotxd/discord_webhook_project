@@ -10,6 +10,9 @@ if not WEBHOOK_URL:
     print("Error: DISCORD_WEBHOOK_URL environment variable is not set.")
     exit(1)
 
+# Din thumbnail-URL (udskift dette med linket fra din Discord-kanal)
+THUMBNAIL_URL = 'https://upload.wikimedia.org/wikipedia/commons/c/ca/1x1.png'
+
 description_text = """
 **Addons:**
 Method Raid Tools (MRT)
@@ -41,10 +44,8 @@ main_embed.set_author(
 )
 
 # --- Tilføj dette for at gøre embed'et bredere ---
-# Dette felt bruger et "fuld bredde"-mellemrum (\u3000).
-# Juster antallet for at finde den ønskede bredde uden linjeskift.
-# Start med 2-3 stykker og øg efter behov.
-main_embed.add_field(name=" ", value="\u3000\u3000\u3000\u3000\u3000\u3000\u3000\u3000\u3000", inline=False)
+# Dette er den mest pålidelige måde at styre bredden på.
+main_embed.set_thumbnail(url=THUMBNAIL_URL)
 # --- Slut på tilføjelsen ---
 
 # Create a list to hold the single embed object.
