@@ -36,7 +36,7 @@ Tryk på "Go" (se billede 6).
 Når jeres sim er færdig, kopierer i linket og smider det ind under "Wishlist - Personal" på https://wowaudit.com/eu/silvermoon/praktikanterne/main/wishlists/personal (Se billede 7).
 """
 
-# --- Step 1: Create and send the embed without images ---
+# --- Step 1: Create the embed object ---
 main_embed = discord.Embed(
     title='I kan følge nedenstående guide til, hvordan i uploader jeres sims, som skal være uploadet inden raid for at få loot',
     description=description_text,
@@ -48,41 +48,30 @@ main_embed.set_author(
     icon_url='https://cdn.discordapp.com/embed/avatars/0.png'
 )
 
+# Opret en liste med embed-objektet
 embeds_list = [main_embed]
 
-# --- Step 2: Prepare the image files for the second message ---
+# --- Step 2: Prepare the image files ---
 files_to_send = {}
 for i, url in enumerate(all_image_urls):
     try:
         response = requests.get(url)
         response.raise_for_status()
         
-        # Den korrekte måde at vedhæfte filer i requests
-        # er at bruge en dictionary hvor værdien er et tuple
-        # med filnavn og data.
-        files_to_send[f"file{i+1}"] = (f"billede{i+1}.png", io.BytesIO(response.content))
+        # Opretter et fil-lignende objekt og tilføjer det til dictionary
+        files_to_send[f"file{i}"] = (f"billede{i+1}.png", io.BytesIO(response.content))
         
     except requests.exceptions.RequestException as e:
         print(f"Failed to fetch image from URL {url}: {e}")
 
-# --- Step 3: Send both messages separately ---
+# --- Step 3: Send både embeds og billeder i en enkelt forespørgsel ---
 try:
-    # Send the first message with the embed
-    response1 = requests.post(
+    response = requests.post(
         WEBHOOK_URL,
-        json={'embeds': [e.to_dict() for e in embeds_list]},
-        headers={'Content-Type': 'application/json'}
-    )
-    response1.raise_for_status()
-    print("Successfully sent embed message.")
-
-    # Send the second message with the image attachments
-    response2 = requests.post(
-        WEBHOOK_URL,
+        data={'embeds': embeds_list[0].to_dict()}, # Send kun et enkelt embed-objekt her
         files=files_to_send,
     )
-    response2.raise_for_status()
-    print("Successfully sent image messages.")
-    
+    response.raise_for_status()
+    print("Successfully sent message with embed and images.")
 except requests.exceptions.RequestException as e:
     print(f"Failed to send webhook message: {e}")
