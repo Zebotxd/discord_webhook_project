@@ -2,10 +2,12 @@ import discord
 import requests
 import os
 
-# The script will now read the webhook URL from the environment variable set in the GitHub Action.
+# Scriptet læser nu webhook-URL'en fra den GitHub Action environment variable.
 WEBHOOK_URL = os.environ.get("DISCORD_WEBHOOK_URL")
 
-# Make sure the URL exists before trying to send the message.
+# Henter tokenet fra en environment variable.
+WOWUP_TOKEN = os.environ.get("WOWUP_TOKEN")
+
 if not WEBHOOK_URL:
     print("Error: DISCORD_WEBHOOK_URL environment variable is not set.")
     exit(1)
@@ -13,7 +15,8 @@ if not WEBHOOK_URL:
 # Din thumbnail-URL (udskift dette med linket fra din Discord-kanal)
 THUMBNAIL_URL = 'https://cdn.discordapp.com/attachments/1400838933960589422/1400840729085087855/Praktikanterne_logo.png?ex=688e1a18&is=688cc898&hm=eeb70914e72056e2bdf4a9f6b9e4f930f0dc6407f5d64bec51ebfd1c28bef66d&'
 
-description_text = """
+# Den opdaterede beskrivelsestekst, der indsætter tokenet.
+description_text = f"""
 **Addons:**
 Method Raid Tools (MRT)
 RC Loot Council
@@ -24,11 +27,14 @@ Liquid Auraupdater (Se guide nedenfor)
 
 
 **WeakAuras:**
-Liquid Liberation of Undermine: https://wago.io/LiquidUndermine                                   
-Liquid Weak Auras: https://wago.io/LiquidWeakAuras
-Liquid Raid Anchors: https://wago.io/LiquidAnchors
+Liquid (Hentes via AuraUpdater)
 Kaze MRT Timers: https://wago.io/n7l5uN3YM
-Interrupt Anchor: https://wago.io/InterruptAnchor
+
+**Liquid AuraUpdater Guide**
+1. Installer WowUp fra **https://wowup.io/**.
+2. Åbn WowUp > Options > Addons og indsæt denne token: **{WOWUP_TOKEN}**.
+3. Gå til Get Addons > Install from URL og indsæt URL'en: **https://github.com/bart-dev-wow/AuraUpdater**.
+4. In-game, skriv **/AU** for at opdatere Liquid WeakAuras.
 """
 
 # Create a single embed with a title, description, and author.
