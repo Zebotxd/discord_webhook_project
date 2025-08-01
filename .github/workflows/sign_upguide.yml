@@ -1,4 +1,4 @@
-name: Send Discord Embeds
+name: Sign-up Guide
 
 on:
   workflow_dispatch: # This allows you to manually run the workflow from the Actions tab
