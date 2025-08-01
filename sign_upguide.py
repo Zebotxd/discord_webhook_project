@@ -30,7 +30,7 @@ description_text = """
 **Tilmeldingsguide**
 - **Første gang:** Vælg status (Present/Absent/Late) og følg linket fra WoWaudit-botten for at linke din konto. Herefter kan du tilmelde dig fra enhver enhed.
 
-- **Deadline:** Du skal tilmelde dig senest 24 timer før raidstart. Rosteren sættes ca. 24 timer før.
+- **Deadline:** Du skal tilmelde dig senest 24 timer før raidstart. Roster sættes ca. 24 timer før.
 
 - **Afbud:** Sæt din status til "Absent", hvis du ikke kan deltage. Ved afbud efter deadline skal du kontakte en officer med det samme.
 - **Kontakt ved forsinkelse:** Kontakt direkte <@173786599140622336> eller <@231862976502562816> ved forsinkelse eller fravær efter rosteren er sat. Udeblivelse uden varsel er uacceptabelt.
