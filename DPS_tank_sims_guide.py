@@ -27,35 +27,19 @@ shared_url = 'https://discord.com/channels/937428319295655966/122622524228501928
 # The triple quotes allow for multi-line text with formatting.
 description_text = """
 **Sims og Lootfordeling**
-Vi bruger sims til at sikre, at loot bliver fordelt til dem, der får mest ud af det. For at modtage loot er det derfor et krav, at dine sims er uploadet inden raid. Har du spørgsmål eller udfordringer, skal du kontakte <@173786599140622336>.
+Sims er et krav for at modtage loot. De bruges til at sikre, at loot går til dem, der får mest ud af det.
 
-**Automatisk upload (anbefalet)**
-Tag dit raid-gear på & skriv /simc i chatten og kopier teksten
+**Automatisk Upload (anbefales)**
+1. Tag `/simc`-string i chatten og indsæt den i <#1249690921566601247>.
+2. **Hvis teksten er for lang, skal du uploade den som en fil.**
+3. Upload ST-sim først, derefter AoE.
+4. Botten reagerer med ✅ ved succes.
+5. Se YouTube-guiden for detaljer: https://www.youtube.com/watch?v=GSVXPuNl65o .
 
-Indsæt teksten i Discord-kanalen <#1249690921566601247>. Hvis teksten er for lang, skal du uploade den som en fil.
-
-Upload Single Target (ST) sim først, og derefter AoE-sim, hvis du ønsker at uploade for begge.
-
-Botten reagerer med ⏳, og når den er færdig, vises ✅ for succes eller ⛔ ved fejl.
-Upload i god tid, da botten kan være belastet op til raid.
-
-Tip: Få en mere detaljeret, pædagogisk forklaring i denne YouTube-guide, der viser hele processen med at bruge botten: https://www.youtube.com/watch?v=GSVXPuNl65o .
-
-**Manuel upload**
-Tag dit raid-gear på & skriv /simc i chatten og kopier teksten.
-
-Gå til www.Raidbots.com og vælg Droptimizer.
-
-Paste din /simc-streng, vælg det relevante raid, og kør to separate sims:
-
-Single Target (ST): Patchwork, 1 target, 5 min.
-AoE: Patchwork, 5 targets, 5 min.
-
-Når dine sims er færdige, kopierer du linket.
-
-Gå til https://wowaudit.com/eu/silvermoon/praktikanterne/main/wishlists/personal.
-
-Indsæt Raidbots-linket under "Wishlist - Personal" og vælg, om det er en "Single Target" eller "AOE" sim.
+**Manuel Upload**
+1. Tag din `/simc`-string ingame.
+2. Gå til www.Raidbots.com, vælg **Droptimizer**, og kør to sims: ST (1 target) og AoE (5 targets).
+3. Kopier linket, gå til **Wowaudit** på "Wishlist - Personal" og indsæt det.
 """
 
 # Create the first embed with the title, author, and description.
