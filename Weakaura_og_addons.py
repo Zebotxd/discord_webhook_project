@@ -25,7 +25,7 @@ Liquid Liberation of Undermine: https://wago.io/LiquidUndermine
 Liquid Weak Auras: https://wago.io/LiquidWeakAuras
 Liquid Raid Anchors: https://wago.io/LiquidAnchors
 Kaze MRT Timers: https://wago.io/n7l5uN3YM
-Interrupt Anchor: https://wago.io/InterruptAnchor**bold text****bold text**
+Interrupt Anchor: https://wago.io/InterruptAnchor
 """
 
 # Create a single embed with a title, description, and author.
