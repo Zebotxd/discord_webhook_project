@@ -1,7 +1,7 @@
 import discord
 import requests
 import os
-import io # Tilføj denne linje
+import io
 
 # The script will now read the webhook URL from the environment variable set in the GitHub Action.
 WEBHOOK_URL = os.environ.get("DISCORD_WEBHOOK_URL")
@@ -51,13 +51,18 @@ main_embed.set_author(
 embeds_list = [main_embed]
 
 # --- Step 2: Prepare the image files for the second message ---
-files_to_send = {}
+files_to_send = [] # Ændret til en liste for at håndtere filerne korrekt
 for i, url in enumerate(all_image_urls):
     try:
-        response = requests.get(url, stream=True)
+        response = requests.get(url)
         response.raise_for_status()
-        # Brug io.BytesIO til at oprette et fil-lignende objekt fra billedets indhold.
-        files_to_send[f"file{i+1}"] = (f"billede{i+1}.png", io.BytesIO(response.content), 'image/png')
+        
+        # Opretter et fil-lignende objekt fra billedets indhold
+        file_data = io.BytesIO(response.content)
+        
+        # Tilføj filen til listen i det korrekte format
+        files_to_send.append((f"billede{i+1}.png", file_data, 'image/png'))
+        
     except requests.exceptions.RequestException as e:
         print(f"Failed to fetch image from URL {url}: {e}")
 
