@@ -11,7 +11,7 @@ if not WEBHOOK_URL:
     exit(1)
 
 # Din thumbnail-URL (udskift dette med linket fra din Discord-kanal)
-THUMBNAIL_URL = 'https://upload.wikimedia.org/wikipedia/commons/c/ca/1x1.png'
+THUMBNAIL_URL = 'https://cdn.discordapp.com/attachments/1400838933960589422/1400840154167382177/Gemini_Generated_Image_7v6gzi7v6gzi7v6g.png?ex=688e198f&is=688cc80f&hm=d5f416911580c29383857487f7d83297e949e58e20363ab029d62f375c2e2d29&'
 
 description_text = """
 **Addons:**
