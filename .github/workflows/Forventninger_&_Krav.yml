@@ -1,0 +1,24 @@
+name: Send Discord Embeds
+
+on:
+  workflow_dispatch: # This allows you to manually run the workflow from the Actions tab
+
+jobs:
+  send_message:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository code
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.10'
+
+      - name: Install dependencies
+        run: pip install discord.py requests
+
+      - name: Run the Python script
+        run: python Forventninger_&_Krav.py
+        env:
+          DISCORD_WEBHOOK_URL: ${{ secrets.DISCORD_WEBHOOK_URL }}
