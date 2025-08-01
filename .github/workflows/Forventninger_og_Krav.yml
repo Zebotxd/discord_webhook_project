@@ -19,6 +19,6 @@ jobs:
         run: pip install discord.py requests
 
       - name: Run the Python script
-        run: python Forventninger_&_Krav.py
+        run: python Forventninger_og_Krav.py
         env:
           DISCORD_WEBHOOK_URL: ${{ secrets.DISCORD_WEBHOOK_URL }}
