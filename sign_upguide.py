@@ -28,17 +28,19 @@ shared_url = 'https://discord.com/channels/937428319295655966/122622524228501928
 # This is the text you provided, formatted for the embed description.
 # The triple quotes allow for multi-line text with formatting.
 description_text = """
-Første gang man signer up, skal man gøre følgende:
-Vælg present, absent eller late.
-Klik på det link, som WoWaudit botten sender til dig for at linke din konto med WoWaudit (se billede 1).
-Når du er logget ind, og du har linket din konto, kan du fremover bruge kanalen ⁠sign-up til at signe up til raid fra alle enheder, hvor du er logget ind på Discord (se billede 2).
+**Sign-up til Raids**
+For at deltage i raids skal du tilmelde dig via vores sign-up-kanal.
 
-Man skal have signet op senest 24 timer før, men vi ser gerne, at man signer op hurtigst muligt og gerne i god tid.
-Vi forventer, at alle signer. Hvis man ikke kan komme, signer man sig selvfølgelig som absent.
-Vi sætter roster ca. 24 timer før raid start. Når rosteret er sat, får i en lille besked herom i ⁠<#1226225068892487822>, og så kan man se, hvilke bosser man er inde på ved at kigge på billedet i øverste højre hjørne af det pågældende event (se billede 3 og 4).
+Første gang: Tilmeld dig ved at vælge Present, Absent eller Late. Følg linket fra WoWaudit-botten for at forbinde din Discord-konto.
 
-Hvis der skulle opstå en situation under 24 timer før raid, altså efter der er sat roster, så er det vigtigt, at man kontakter en officer! Hvis man bliver forsinket, eller man er nødt til helt at udeblive fra raid, så kræver vi, at man skriver direkte til <@173786599140622336>eller <@231862976502562816>.
-At blive forsinket eller udeblive fra raid efter roster er sat - uden at give lyd fra sig - er et totalt no-go.
+Deadline: Du skal tilmelde dig senest 24 timer før raidstart. Vi opfordrer til, at alle signer op hurtigst muligt.
+
+Roster: Vi sætter rosteren ca. 24 timer før raid og annoncerer det i <#1226225068892487822>. Du kan se, hvilke bosser du er sat til, på event-billedet.
+
+**Ændringer og Afbud**
+Hvis du ikke kan deltage, skal du signe dig som Absent.
+
+Afbud efter deadline (inden for 24 timer): Kontakt en officer med det samme. Udeblivelse uden varsel er ikke acceptabelt. Kontakt direkte <@173786599140622336> eller <@231862976502562816>, hvis du bliver forsinket eller helt må udeblive.
 """
 
 # Create the first embed with the title, author, and description.
