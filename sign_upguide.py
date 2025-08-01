@@ -48,7 +48,7 @@ main_embed = discord.Embed(
 
 # Add the author attribute. You can replace the name and icon_url.
 main_embed.set_author(
-    name="Sign up-guide"
+    name="Sign up-guide",
     icon_url='https://cdn.discordapp.com/embed/avatars/0.png' # You can put a URL to a guild icon here.
 )
 
