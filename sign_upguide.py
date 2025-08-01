@@ -48,7 +48,7 @@ main_embed = discord.Embed(
 
 # Add the author attribute. You can replace the name and icon_url.
 main_embed.set_author(
-    name='Til raid sign-up bruger vi WoWaudit, som findes i kanalen <#1226225242285019286>',
+    name="Til raid sign-up bruger vi WoWaudit, som findes i kanalen <#1226225242285019286>",
     icon_url='https://cdn.discordapp.com/embed/avatars/0.png' # You can put a URL to a guild icon here.
 )
 
