@@ -3,17 +3,17 @@ import requests
 import os
 import io
 import json
+import time
 
-# The script will now read the webhook URL from the environment variable set in the GitHub Action.
+# Scriptet læser nu webhook-URL'en fra den GitHub Action environment variable.
 WEBHOOK_URL = os.environ.get("DISCORD_WEBHOOK_URL")
 
-# Make sure the URL exists before trying to send the message.
+# Sikrer, at URL'en eksisterer, før scriptet fortsætter.
 if not WEBHOOK_URL:
     print("Error: DISCORD_WEBHOOK_URL environment variable is not set.")
     exit(1)
 
-# List of all your image URLs from Discord's CDN.
-# (Udskift disse med de links, du har kopieret fra din Discord-kanal)
+# Liste over alle dine billed-URL'er fra Discord's CDN.
 all_image_urls = [
     'https://cdn.discordapp.com/attachments/1397519593764814889/1400823597143953419/Healer_guide_1.png?ex=688e0a23&is=688cb8a3&hm=af21235a48e9f347789de21d73760e5c38a9930c26ae78eb7ef1042e541a004d&',
     'https://cdn.discordapp.com/attachments/1397519593764814889/1400823596485447730/Healer_guide_2.png?ex=688e0a23&is=688cb8a3&hm=d2620363a7757ce7d4e3f69c983eb32e79b40222a5f0bd4609fbf3d35891fc9d&',
@@ -38,9 +38,9 @@ Tryk på "Go" (se billede 6).
 Når jeres sim er færdig, kopierer i linket og smider det ind under "Wishlist - Personal" på https://wowaudit.com/eu/silvermoon/praktikanterne/main/wishlists/personal (Se billede 7).
 """
 
-# --- Step 1: Create the embed object ---
+# --- Trin 1: Opret og send embed-beskeden ---
 main_embed = discord.Embed(
-    title='I kan følge nedenstående guide til, hvordan i uploader jeres sims, som skal være uploadet inden raid for at få loot',
+    title='I kan følge nedenstående guide til, hvordan i uploader jeres sims, som skal være uploaded inden raid for at få loot',
     description=description_text,
     color=discord.Color.blue()
 )
@@ -50,12 +50,24 @@ main_embed.set_author(
     icon_url='https://cdn.discordapp.com/embed/avatars/0.png'
 )
 
-# Opret payload for embed-beskeden
-payload = {
-    'embeds': [main_embed.to_dict()]
-}
+# Send den første besked med embed-objektet
+try:
+    response1 = requests.post(
+        WEBHOOK_URL,
+        json={'embeds': [main_embed.to_dict()]},
+        headers={'Content-Type': 'application/json'}
+    )
+    response1.raise_for_status()
+    print("Successfully sent embed message.")
+except requests.exceptions.RequestException as e:
+    print(f"Failed to send webhook message: {e}")
+    exit(1)
 
-# --- Step 2: Prepare the image files ---
+# --- Trin 2: Forbered billederne og send den anden besked ---
+# Indbyg en lille pause for at sikre at den første besked er færdig
+print("Waiting for 2 seconds...")
+time.sleep(2)
+
 files_to_send = {}
 for i, url in enumerate(all_image_urls):
     try:
@@ -66,20 +78,17 @@ for i, url in enumerate(all_image_urls):
         
     except requests.exceptions.RequestException as e:
         print(f"Failed to fetch image from URL {url}: {e}")
-        # Fejlhåndtering: Hvis en download fejler, skal vi stoppe
         files_to_send = None 
         break
 
-# --- Step 3: Send både embeds og billeder i en enkelt forespørgsel ---
 if files_to_send:
     try:
-        response = requests.post(
+        response2 = requests.post(
             WEBHOOK_URL,
-            data={'payload_json': json.dumps(payload)},
-            files=files_to_send
+            files=files_to_send,
         )
-        response.raise_for_status()
-        print("Successfully sent message with embed and images.")
+        response2.raise_for_status()
+        print("Successfully sent image messages.")
     except requests.exceptions.RequestException as e:
         print(f"Failed to send webhook message: {e}")
 else:
