@@ -3,7 +3,6 @@ import requests
 import os
 import io
 import json
-import time
 
 # The script will now read the webhook URL from the environment variable set in the GitHub Action.
 WEBHOOK_URL = os.environ.get("DISCORD_WEBHOOK_URL")
@@ -13,15 +12,16 @@ if not WEBHOOK_URL:
     print("Error: DISCORD_WEBHOOK_URL environment variable is not set.")
     exit(1)
 
-# List of all your image URLs
+# List of all your image URLs from Discord's CDN.
+# (Udskift disse med de links, du har kopieret fra din Discord-kanal)
 all_image_urls = [
-    'https://i.imgur.com/HhdOUuI.png',
-    'https://i.imgur.com/ymUsOko.png',
-    'https://i.imgur.com/BAYoWDL.jpeg',
-    'https://i.imgur.com/A6cLdgP.png',
-    'https://i.imgur.com/e9aRuvJ.png',
-    'https://i.imgur.com/whTKbhr.png',
-    'https://i.imgur.com/QhzVeOH.png'
+    'https://cdn.discordapp.com/attachments/1397519593764814889/1400823597143953419/Healer_guide_1.png?ex=688e0a23&is=688cb8a3&hm=af21235a48e9f347789de21d73760e5c38a9930c26ae78eb7ef1042e541a004d&',
+    'https://cdn.discordapp.com/attachments/1397519593764814889/1400823596485447730/Healer_guide_2.png?ex=688e0a23&is=688cb8a3&hm=d2620363a7757ce7d4e3f69c983eb32e79b40222a5f0bd4609fbf3d35891fc9d&',
+    'https://cdn.discordapp.com/attachments/1397519593764814889/1400823595797577870/Healer_guide_3.jpg?ex=688e0a23&is=688cb8a3&hm=ece87e3a5299ccd1005b1affd912b3bb24e9901b0fa46f2d8e202928eae8e34e&',
+    'https://cdn.discordapp.com/attachments/1397519593764814889/1400823595315363890/Healer_guide_4.png?ex=688e0a23&is=688cb8a3&hm=b697cecaaadd8635d7b72acd7d0bd16f417194ded7b484d596e228236c581317&',
+    'https://cdn.discordapp.com/attachments/1397519593764814889/1400823594686353490/Healer_guide_5.png?ex=688e0a23&is=688cb8a3&hm=37595a5d00b3babb6b51c8a5c71bf73986faa9b8d75b942f08dfcca8e38e445e&',
+    'https://cdn.discordapp.com/attachments/1397519593764814889/1400823594220781609/Healer_guide_6.png?ex=688e0a22&is=688cb8a2&hm=8acd36dad965e4213843dfa1c1b4ec24fbb05d7567e3b67d288e411712667b0c&',
+    'https://cdn.discordapp.com/attachments/1397519593764814889/1400823593796894810/Healer_guide_7.png?ex=688e0a22&is=688cb8a2&hm=5abbffb07b74687abcc21a40dad3f83bd97c794109bee198ead80355b94a4d76&'
 ]
 
 description_text = """
@@ -59,13 +59,10 @@ payload = {
 files_to_send = {}
 for i, url in enumerate(all_image_urls):
     try:
-        response = requests.get(url, timeout=10) # Tilføj en timeout
+        response = requests.get(url, timeout=10)
         response.raise_for_status()
         
         files_to_send[f"file{i}"] = (f"billede{i+1}.png", io.BytesIO(response.content))
-        
-        # Indbyg en lille pause for at undgå at blive blokeret af Imgur
-        time.sleep(1)
         
     except requests.exceptions.RequestException as e:
         print(f"Failed to fetch image from URL {url}: {e}")
@@ -78,7 +75,7 @@ if files_to_send:
     try:
         response = requests.post(
             WEBHOOK_URL,
-            data={'payload_json': json.dumps(payload)}, # Korrekt måde at sende JSON og filer
+            data={'payload_json': json.dumps(payload)},
             files=files_to_send
         )
         response.raise_for_status()
