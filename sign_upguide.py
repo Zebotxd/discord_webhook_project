@@ -47,7 +47,7 @@ main_embed = discord.Embed(
 # Add the author attribute. You can replace the name and icon_url.
 main_embed.set_author(
     name="Sign up-guide",
-    icon_url='https://cdn.discordapp.com/embed/avatars/0.png'
+    icon_url='https://wow.zamimg.com/images/wow/icons/large/inv_misc_note_03.jpg'
 )
 
 # Tilføj dette for at gøre embed'et bredere
