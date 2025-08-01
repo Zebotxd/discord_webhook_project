@@ -40,7 +40,7 @@ main_embed = discord.Embed(
 
 main_embed.set_author(
     name="Vores forventninger og krav til raidet og til jer",
-    icon_url='https://cdn.discordapp.com/embed/avatars/0.png'
+    icon_url='https://wow.zamimg.com/images/wow/icons/large/inv_misc_book_09.jpg'
 )
 
 # Tilføj dette for at gøre embed'et bredere
