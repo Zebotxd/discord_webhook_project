@@ -41,9 +41,10 @@ main_embed.set_author(
 )
 
 # --- Tilføj dette for at gøre embed'et bredere ---
-# Tilføj et felt med en lang række af bindestreger.
-# Dette felt vil være synligt, men det tvinger embed'et til at være bredere.
-main_embed.add_field(name=" ", value="─" * 62, inline=False)
+# Dette felt bruger et "fuld bredde"-mellemrum (\u3000).
+# Juster antallet for at finde den ønskede bredde uden linjeskift.
+# Start med 2-3 stykker og øg efter behov.
+main_embed.add_field(name=" ", value="\u3000\u3000\u3000", inline=False)
 # --- Slut på tilføjelsen ---
 
 # Create a list to hold the single embed object.
