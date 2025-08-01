@@ -35,7 +35,7 @@ Interrupt Anchor: https://wago.io/InterruptAnchor
 main_embed = discord.Embed(
     title='**Til raid forventer vi, at i har:**',
     description=description_text,
-    color=discord.Color.blue()
+    color=discord.Color.purple()
 )
 
 main_embed.set_author(
