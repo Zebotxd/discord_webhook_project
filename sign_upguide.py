@@ -13,10 +13,10 @@ if not WEBHOOK_URL:
 # List of image URLs you want to include.
 # Replace these with your actual image links.
 image_urls = [
-    'https://discord.com/channels/937428319295655966/1343352480855228458/1344061477081845780',
-    'https://discord.com/channels/937428319295655966/1343352480855228458/1344061477081845780',
-    'https://discord.com/channels/937428319295655966/1343352480855228458/1344061477081845780',
-    'https://discord.com/channels/937428319295655966/1343352480855228458/1344061477081845780'
+    'https://i.imgur.com/DCXga87.png',
+    'https://imgur.com/8WUzMz7',
+    'https://imgur.com/IV6rg0l',
+    'https://imgur.com/cldUdeP'
 ]
 
 # The URL that will be shared by all embeds to group them.
