@@ -21,6 +21,7 @@ Liquid Auraupdater (Se guide nedenfor)
 
 
 **WeakAuras:**
+inline=True
 Liquid Liberation of Undermine: https://wago.io/LiquidUndermine                                                                                        
 Liquid Weak Auras: https://wago.io/LiquidWeakAuras
 Liquid Raid Anchors: https://wago.io/LiquidAnchors
