@@ -27,6 +27,7 @@ jobs:
         run: python Weakaura_og_addons.py
         env:
           DISCORD_WEBHOOK_URL: ${{ secrets.DISCORD_WEBHOOK_URL }}
+          WOWUP_TOKEN: ${{ secrets.WOWUP_TOKEN }}
           
       - name: Run Loot regler
         run: python Loot.py
