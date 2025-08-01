@@ -14,33 +14,26 @@ if not WEBHOOK_URL:
 THUMBNAIL_URL = 'https://cdn.discordapp.com/attachments/1400838933960589422/1400840729085087855/Praktikanterne_logo.png?ex=688e1a18&is=688cc898&hm=eeb70914e72056e2bdf4a9f6b9e4f930f0dc6407f5d64bec51ebfd1c28bef66d&'
 
 # List of image URLs you want to include.
-# Replace these with your actual image links.
+# Udskift med dine faktiske billed-links fra en Discord-kanal.
 image_urls = [
-    'https://i.imgur.com/DCXga87.png',
-    'https://i.imgur.com/8WUzMz7.png',
-    'https://i.imgur.com/IV6rg0l.png',
-    'https://i.imgur.com/cldUdeP.png'
+    'https://cdn.discordapp.com/attachments/.../image1.png',
+    'https://cdn.discordapp.com/attachments/.../image2.png',
+    'https://cdn.discordapp.com/attachments/.../image3.png',
+    'https://cdn.discordapp.com/attachments/.../image4.png'
 ]
 
 # The URL that will be shared by all embeds to group them.
-shared_url = 'https://discord.com/channels/937428319295655966/1226225242285019286' # Use a link relevant to your guild or project.
+shared_url = 'https://discord.com/channels/937428319295655966/1226225242285019286'
 
-# This is the text you provided, formatted for the embed description.
-# The triple quotes allow for multi-line text with formatting.
+# Opdateret beskrivelse med den kortere version.
 description_text = """
-**Sign-up til Raids**
-For at deltage i raids skal du tilmelde dig via vores sign-up-kanal.
+**Tilmeldingsguide**
+- **Første gang:** Vælg status (Present/Absent/Late) og følg linket fra WoWaudit-botten for at linke din konto. Herefter kan du tilmelde dig fra enhver enhed.
 
-Første gang: Tilmeld dig ved at vælge Present, Absent eller Late. Følg linket fra WoWaudit-botten for at forbinde din Discord-konto.
+- **Deadline:** Du skal tilmelde dig senest 24 timer før raidstart. Rosteren sættes ca. 24 timer før.
 
-Deadline: Du skal tilmelde dig senest 24 timer før raidstart. Vi opfordrer til, at alle signer op hurtigst muligt.
-
-Roster: Vi sætter rosteren ca. 24 timer før raid og annoncerer det i <#1226225068892487822>. Du kan se, hvilke bosser du er sat til, på event-billedet.
-
-**Ændringer og Afbud**
-Hvis du ikke kan deltage, skal du signe dig som Absent.
-
-Afbud efter deadline (inden for 24 timer): Kontakt en officer med det samme. Udeblivelse uden varsel er ikke acceptabelt. Kontakt direkte <@173786599140622336> eller <@231862976502562816>, hvis du bliver forsinket eller helt må udeblive.
+- **Afbud:** Sæt din status til "Absent", hvis du ikke kan deltage. Ved afbud efter deadline skal du kontakte en officer med det samme.
+- **Kontakt ved forsinkelse:** Kontakt direkte <@173786599140622336> eller <@231862976502562816> ved forsinkelse eller fravær efter rosteren er sat. Udeblivelse uden varsel er uacceptabelt.
 """
 
 # Create the first embed with the title, author, and description.
@@ -54,7 +47,7 @@ main_embed = discord.Embed(
 # Add the author attribute. You can replace the name and icon_url.
 main_embed.set_author(
     name="Sign up-guide",
-    icon_url='https://cdn.discordapp.com/embed/avatars/0.png' # You can put a URL to a guild icon here.
+    icon_url='https://cdn.discordapp.com/embed/avatars/0.png'
 )
 
 # Tilføj dette for at gøre embed'et bredere
