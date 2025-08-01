@@ -29,7 +29,7 @@ all_image_urls = [
 
 description_text = """
 **Sims og Lootfordeling**
-Vi bruger sims til at fordele loot, så det giver mest muligt udbytte. Har du spørgsmål, så kontakt loot-officer @bonkaboy.
+Vi bruger sims til at fordele loot, så det giver mest muligt udbytte.
 
 **Sådan simmer du**
 1. Tag din `/simc`-string i chatten med dit raid gear på.
