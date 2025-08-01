@@ -2,6 +2,8 @@ import discord
 import requests
 import os
 import io
+import json
+import time
 
 # The script will now read the webhook URL from the environment variable set in the GitHub Action.
 WEBHOOK_URL = os.environ.get("DISCORD_WEBHOOK_URL")
@@ -48,30 +50,40 @@ main_embed.set_author(
     icon_url='https://cdn.discordapp.com/embed/avatars/0.png'
 )
 
-# Opret en liste med embed-objektet
-embeds_list = [main_embed]
+# Opret payload for embed-beskeden
+payload = {
+    'embeds': [main_embed.to_dict()]
+}
 
 # --- Step 2: Prepare the image files ---
 files_to_send = {}
 for i, url in enumerate(all_image_urls):
     try:
-        response = requests.get(url)
+        response = requests.get(url, timeout=10) # Tilføj en timeout
         response.raise_for_status()
         
-        # Opretter et fil-lignende objekt og tilføjer det til dictionary
         files_to_send[f"file{i}"] = (f"billede{i+1}.png", io.BytesIO(response.content))
+        
+        # Indbyg en lille pause for at undgå at blive blokeret af Imgur
+        time.sleep(1)
         
     except requests.exceptions.RequestException as e:
         print(f"Failed to fetch image from URL {url}: {e}")
+        # Fejlhåndtering: Hvis en download fejler, skal vi stoppe
+        files_to_send = None 
+        break
 
 # --- Step 3: Send både embeds og billeder i en enkelt forespørgsel ---
-try:
-    response = requests.post(
-        WEBHOOK_URL,
-        data={'embeds': embeds_list[0].to_dict()}, # Send kun et enkelt embed-objekt her
-        files=files_to_send,
-    )
-    response.raise_for_status()
-    print("Successfully sent message with embed and images.")
-except requests.exceptions.RequestException as e:
-    print(f"Failed to send webhook message: {e}")
+if files_to_send:
+    try:
+        response = requests.post(
+            WEBHOOK_URL,
+            data={'payload_json': json.dumps(payload)}, # Korrekt måde at sende JSON og filer
+            files=files_to_send
+        )
+        response.raise_for_status()
+        print("Successfully sent message with embed and images.")
+    except requests.exceptions.RequestException as e:
+        print(f"Failed to send webhook message: {e}")
+else:
+    print("Could not send message due to failed image downloads.")
