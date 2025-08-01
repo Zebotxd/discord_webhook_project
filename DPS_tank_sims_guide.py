@@ -44,7 +44,7 @@ Sims er et krav for at modtage loot. De bruges til at sikre, at loot går til de
 
 # Create the first embed with the title, author, and description.
 main_embed = discord.Embed(
-    title="Beskrivelse af, hvordan man simmer som DPS'er og tank.",
+    title="",
     description=description_text,
     url=shared_url,
     color=discord.Color.orange()
