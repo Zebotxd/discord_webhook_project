@@ -14,9 +14,9 @@ if not WEBHOOK_URL:
 # Replace these with your actual image links.
 image_urls = [
     'https://i.imgur.com/DCXga87.png',
-    'https://imgur.com/8WUzMz7',
-    'https://imgur.com/IV6rg0l',
-    'https://imgur.com/cldUdeP'
+    'https://i.imgur.com/8WUzMz7.png',
+    'https://i.imgur.com/IV6rg0l.png',
+    'https://i.imgur.com/cldUdeP.png'
 ]
 
 # The URL that will be shared by all embeds to group them.
