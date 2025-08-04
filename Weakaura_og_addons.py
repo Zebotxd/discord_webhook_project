@@ -31,7 +31,7 @@ Kaze MRT Timers: https://wago.io/n7l5uN3YM
 
 **Liquid AuraUpdater Guide**
 1. Installer WowUp fra **https://wowup.io/**.
-2. Åbn WowUp > Options > Addons og indsæt denne token: **{WOWUP_TOKEN}**.
+2. Åbn WowUp > Options > Addons og indsæt denne token: **{WOWUP_TOKEN}**
 3. Gå til Get Addons > Install from URL og indsæt URL'en: **https://github.com/bart-dev-wow/AuraUpdater**.
 4. In-game, skriv **/AU** for at opdatere Liquid WeakAuras.
 """
