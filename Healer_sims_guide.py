@@ -18,13 +18,13 @@ THUMBNAIL_URL = 'https://cdn.discordapp.com/attachments/1400838933960589422/1400
 
 # Liste over alle dine billed-URL'er fra Discord's CDN.
 all_image_urls = [
-    'https://cdn.discordapp.com/attachments/1397519593764814889/1400823597143953419/Healer_guide_1.png?ex=688e0a23&is=688cb8a3&hm=af21235a48e9f347789de21d73760e5c38a9930c26ae78eb7ef1042e541a004d&',
-    'https://cdn.discordapp.com/attachments/1397519593764814889/1400823596485447730/Healer_guide_2.png?ex=688e0a23&is=688cb8a3&hm=d2620363a7757ce7d4e3f69c983eb32e79b40222a5f0bd4609fbf3d35891fc9d&',
-    'https://cdn.discordapp.com/attachments/1397519593764814889/1400823595797577870/Healer_guide_3.jpg?ex=688e0a23&is=688cb8a3&hm=ece87e3a5299ccd1005b1affd912b3bb24e9901b0fa46f2d8e202928eae8e34e&',
-    'https://cdn.discordapp.com/attachments/1397519593764814889/1400823595315363890/Healer_guide_4.png?ex=688e0a23&is=688cb8a3&hm=b697cecaaadd8635d7b72acd7d0bd16f417194ded7b484d596e228236c581317&',
-    'https://cdn.discordapp.com/attachments/1397519593764814889/1400823594686353490/Healer_guide_5.png?ex=688e0a23&is=688cb8a3&hm=37595a5d00b3babb6b51c8a5c71bf73986faa9b8d75b942f08dfcca8e38e445e&',
-    'https://cdn.discordapp.com/attachments/1397519593764814889/1400823594220781609/Healer_guide_6.png?ex=688e0a22&is=688cb8a2&hm=8acd36dad965e4213843dfa1c1b4ec24fbb05d7567e3b67d288e411712667b0c&',
-    'https://cdn.discordapp.com/attachments/1397519593764814889/1400823593796894810/Healer_guide_7.png?ex=688e0a22&is=688cb8a2&hm=5abbffb07b74687abcc21a40dad3f83bd97c794109bee198ead80355b94a4d76&'
+    'https://media.discordapp.net/attachments/1400838933960589422/1401928556614779101/Healer_guide_1.png?ex=68920f36&is=6890bdb6&hm=57790bbfe970cedca743093fb941adfe83ede3d3bb9692a3c465d6f85d2f5e84&=&format=webp&quality=lossless&width=1708&height=856',
+    'https://media.discordapp.net/attachments/1400838933960589422/1401928556304531567/Healer_guide_2.png?ex=68920f36&is=6890bdb6&hm=4d0155ea7ed673cebe67f657925318cf5259ce15712bcf217553bb0d67f67ac9&=&format=webp&quality=lossless&width=1656&height=856',
+    'https://media.discordapp.net/attachments/1400838933960589422/1401928555692294274/Healer_guide_3.jpg?ex=68920f36&is=6890bdb6&hm=5c014abf54b50e03cc5caaf3a9cba008c7778a6aa67b063ec27a502f3bccc16d&=&format=webp&width=1062&height=856',
+    'https://media.discordapp.net/attachments/1400838933960589422/1401928555323199660/Healer_guide_4.png?ex=68920f36&is=6890bdb6&hm=b961405fd12f28811dd796a3063d50fd1213a756a56d705f2eca7b5efcdb83b2&=&format=webp&quality=lossless',
+    'https://media.discordapp.net/attachments/1400838933960589422/1401928554886987776/Healer_guide_5.png?ex=68920f36&is=6890bdb6&hm=e4e2fe0a005d49f4258c2a8bfd17241fd5bc670cf194036ab1230a2ab9425c5d&=&format=webp&quality=lossless',
+    'https://media.discordapp.net/attachments/1400838933960589422/1401928554538602496/Healer_guide_6.png?ex=68920f35&is=6890bdb5&hm=9718b7b52b22d88fd5aaca6d0f5cd19e6f99d221bfdc64fd034b4745a8626036&=&format=webp&quality=lossless&width=1654&height=856',
+    'https://media.discordapp.net/attachments/1400838933960589422/1401928554073161821/Healer_guide_7.png?ex=68920f35&is=6890bdb5&hm=e15ce928b62236032b074a506c87acab7ea91cfbd37e24f640086a3b6aae1594&=&format=webp&quality=lossless&width=1640&height=856'
 ]
 
 description_text = """
